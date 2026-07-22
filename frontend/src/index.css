@@ -1,0 +1,32 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  background-color: #fafaf9;
+}
+
+/* Reusable utility */
+@layer components {
+  .btn-primary {
+    @apply bg-brand-600 hover:bg-brand-700 text-white font-semibold py-2.5 px-4 rounded-lg transition shadow-sm;
+  }
+  .btn-secondary {
+    @apply bg-white hover:bg-stone-100 text-stone-800 border border-stone-300 font-semibold py-2.5 px-4 rounded-lg transition;
+  }
+  .input {
+    @apply w-full px-3 py-2 border border-stone-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent bg-white;
+  }
+}
+
+@media print {
+  body * { visibility: hidden; }
+  .invoice-print, .invoice-print * { visibility: visible; }
+  .invoice-print { position: absolute; left: 0; top: 0; width: 100%; }
+}
