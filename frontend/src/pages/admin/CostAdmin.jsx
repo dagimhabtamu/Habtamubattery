@@ -6,7 +6,7 @@ import DataTable from '../../components/DataTable.jsx';
 import Modal from '../../components/Modal.jsx';
 import FormInput from '../../components/FormInput.jsx';
 import toast from 'react-hot-toast';
-import { Plus, Trash2 } from 'lucide-react';
+import { Plus, Edit, Trash2 } from 'lucide-react';
 import { formatCurrency, formatDate } from '../../utils/format.js';
 
 const empty = { category: 'oxygenRefill', description: '', amount: 0 };
@@ -15,23 +15,34 @@ export default function CostAdmin() {
   const { data, loading, refetch } = useApi('/costs?limit=500');
   const [open, setOpen] = useState(false);
   const [form, setForm] = useState(empty);
+  const [editing, setEditing] = useState(null);
 
   const items = data?.items || [];
 
+  const openCreate = () => { setForm(empty); setEditing(null); setOpen(true); };
+  const openEdit = (row) => { setForm({ ...row }); setEditing(row._id); setOpen(true); };
+
   const save = async () => {
     try {
-      await api.post('/costs', form);
-      toast.success('Cost recorded');
+      if (editing) await api.put(`/costs/${editing}`, form);
+      else await api.post('/costs', form);
+      toast.success(editing ? 'Expense updated' : 'Expense recorded');
       setOpen(false);
-      setForm(empty);
       refetch();
-    } catch (e) { toast.error('Save failed'); }
+    } catch (e) {
+      toast.error(e.response?.data?.message || 'Save failed');
+    }
   };
 
   const remove = async (id) => {
-    if (!confirm('Delete?')) return;
-    try { await api.delete(`/costs/${id}`); toast.success('Removed'); refetch(); }
-    catch (e) { toast.error('Delete failed'); }
+    if (!confirm('Delete this expense?')) return;
+    try {
+      await api.delete(`/costs/${id}`);
+      toast.success('Removed');
+      refetch();
+    } catch (e) {
+      toast.error('Delete failed');
+    }
   };
 
   const columns = [
@@ -41,9 +52,14 @@ export default function CostAdmin() {
     { key: 'createdAt', label: 'Date', render: (r) => formatDate(r.createdAt) },
     {
       key: 'actions', label: '', render: (r) => (
-        <button onClick={() => remove(r._id)} className="p-1.5 rounded hover:bg-red-50 text-red-600" aria-label="Delete">
-          <Trash2 size={16}/>
-        </button>
+        <div className="flex gap-2">
+          <button onClick={() => openEdit(r)} className="p-1.5 rounded hover:bg-stone-100" aria-label="Edit">
+            <Edit size={16} />
+          </button>
+          <button onClick={() => remove(r._id)} className="p-1.5 rounded hover:bg-red-50 text-red-600" aria-label="Delete">
+            <Trash2 size={16} />
+          </button>
+        </div>
       ),
     },
   ];
@@ -51,20 +67,31 @@ export default function CostAdmin() {
   return (
     <>
       <Helmet><title>Expenses - Admin</title><meta name="robots" content="noindex" /></Helmet>
+
+      <h1 className="text-2xl font-extrabold text-stone-900 mb-1">Expenses</h1>
+      <p className="text-stone-500 mb-6">Track and manage business expenses by category.</p>
+
       <div className="flex items-center justify-between mb-4">
-        <h1 className="text-2xl font-extrabold text-stone-900">Expenses</h1>
-        <button onClick={() => setOpen(true)} className="btn-primary inline-flex items-center gap-2"><Plus size={16}/> Add expense</button>
+        <span className="text-sm text-stone-500">{items.length} total expense(s)</span>
+        <button onClick={openCreate} className="btn-primary inline-flex items-center gap-2">
+          <Plus size={16}/> Add expense
+        </button>
       </div>
-      {loading ? <p>Loading...</p> : <DataTable columns={columns} rows={items} />}
+
+      {loading ? (
+        <div className="text-center py-16 text-stone-500">Loading expenses...</div>
+      ) : (
+        <DataTable columns={columns} rows={items} />
+      )}
 
       <Modal
         open={open}
         onClose={() => setOpen(false)}
-        title="New expense"
+        title={editing ? 'Edit expense' : 'New expense'}
         footer={
           <div className="flex justify-end gap-2">
             <button onClick={() => setOpen(false)} className="btn-secondary">Cancel</button>
-            <button onClick={save} className="btn-primary">Save</button>
+            <button onClick={save} className="btn-primary">{editing ? 'Update' : 'Save'}</button>
           </div>
         }
       >

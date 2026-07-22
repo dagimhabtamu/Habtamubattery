@@ -40,11 +40,7 @@ export default function Navbar() {
                   Logout
                 </button>
               </>
-            ) : (
-              <Link to="/admin/login" className="text-sm text-stone-500 hover:text-brand-700">
-                Staff
-              </Link>
-            )}
+            ) : null}
           </div>
 
           <button
@@ -72,15 +68,7 @@ export default function Navbar() {
                   Logout
                 </button>
               </>
-            ) : (
-              <Link
-                to="/admin/login"
-                onClick={() => setMenuOpen(false)}
-                className="text-sm text-stone-500 hover:text-brand-700 mt-2 inline-block"
-              >
-                Staff
-              </Link>
-            )}
+            ) : null}
           </div>
         )}
       </nav>

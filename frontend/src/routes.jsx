@@ -45,8 +45,10 @@ export default function AppRoutes() {
 
       {/* ADMIN AREA — NO public Navbar / Footer */}
       <Route path="/admin" element={<AdminShell />}>
+        {/* Public admin login (no sidebar) */}
         <Route path="login" element={<AdminLogin />} />
 
+        {/* Protected admin pages (WITH sidebar) */}
         <Route
           element={
             <ProtectedRoute>
@@ -61,9 +63,9 @@ export default function AppRoutes() {
           <Route path="acid" element={<AcidAdmin />} />
           <Route path="services" element={<ServiceAdmin />} />
           <Route path="sales" element={<SaleAdmin />} />
+          <Route path="costs" element={<CostAdmin />} />
+          <Route path="reports" element={<Reports />} />
         </Route>
-        <Route path="costs" element={<CostAdmin />} />
-        <Route path="reports" element={<Reports />} />
       </Route>
     </Routes>
   );

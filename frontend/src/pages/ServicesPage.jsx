@@ -1,6 +1,5 @@
 import { Helmet } from 'react-helmet-async';
-import { Droplets, Wrench, Sparkles, RefreshCcw } from 'lucide-react';
-import { Link } from 'react-router-dom';
+import { Droplets, Wrench, Sparkles, RefreshCcw, Phone } from 'lucide-react';
 
 const services = [
   {
@@ -57,9 +56,11 @@ export default function ServicesPage() {
         <div className="mt-12 bg-brand-50 border border-brand-200 rounded-xl p-6 text-center">
           <h2 className="font-bold text-stone-900 text-xl mb-2">Need a service?</h2>
           <p className="text-stone-700 mb-4">
-            Sign in as staff to log a service job and generate a customer receipt.
+            Walk in to our shop or give us a call to book your battery service today.
           </p>
-          <Link to="/login" className="btn-primary">Staff Login</Link>
+          <a href="tel:+251911134195" className="btn-primary inline-flex items-center gap-2">
+            <Phone size={16} /> Call +251 91 113 4195
+          </a>
         </div>
       </section>
     </>
