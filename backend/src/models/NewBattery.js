@@ -1,4 +1,4 @@
-import mongoose from 'mongoose';
+﻿import mongoose from 'mongoose';
 
 const newBatterySchema = new mongoose.Schema(
   {
@@ -10,6 +10,7 @@ const newBatterySchema = new mongoose.Schema(
     warrantyMonths: { type: Number, default: 12 },
     description: { type: String },
     imageUrl: { type: String },
+    published: { type: Boolean, default: false, index: true },
   },
   { timestamps: true }
 );

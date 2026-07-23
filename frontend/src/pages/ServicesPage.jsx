@@ -1,5 +1,6 @@
-import { Helmet } from 'react-helmet-async';
-import { Droplets, Wrench, Sparkles, RefreshCcw, Phone } from 'lucide-react';
+﻿import { Helmet } from 'react-helmet-async';
+import { Droplets, Wrench, Sparkles, Phone, MapPin, Clock } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const services = [
   {
@@ -17,11 +18,6 @@ const services = [
     title: 'General Repairs',
     text: 'Diagnostic and full repair of old batteries, brought back to life.',
   },
-  {
-    icon: <RefreshCcw size={28} />,
-    title: 'Oxygen Refill',
-    text: 'Top-up distilled water and restore electrolyte balance.',
-  },
 ];
 
 export default function ServicesPage() {
@@ -31,7 +27,7 @@ export default function ServicesPage() {
         <title>Battery Services - Habtamu Batteries</title>
         <meta
           name="description"
-          content="Acid change, terminal fix, battery repairs and oxygen refill services by Habtamu Batteries."
+          content="Acid change, terminal fix and battery repairs by Habtamu Batteries in Addis Ababa."
         />
       </Helmet>
 
@@ -43,22 +39,26 @@ export default function ServicesPage() {
           </p>
         </header>
 
-        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
           {services.map((s) => (
-            <article key={s.title} className="bg-white border border-stone-200 rounded-xl p-6">
-              <div className="text-brand-600 mb-3">{s.icon}</div>
+            <article
+              key={s.title}
+              className="bg-white border border-stone-200 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group"
+            >
+              <div className="text-brand-600 mb-3 group-hover:scale-110 transition-transform duration-300">{s.icon}</div>
               <h2 className="font-bold text-stone-900 text-lg">{s.title}</h2>
               <p className="text-sm text-stone-600 mt-1">{s.text}</p>
             </article>
           ))}
         </div>
 
+        {/* Need a service? CTA - customer facing */}
         <div className="mt-12 bg-brand-50 border border-brand-200 rounded-xl p-6 text-center">
           <h2 className="font-bold text-stone-900 text-xl mb-2">Need a service?</h2>
           <p className="text-stone-700 mb-4">
             Walk in to our shop or give us a call to book your battery service today.
           </p>
-          <a href="tel:+251911134195" className="btn-primary inline-flex items-center gap-2">
+          <a href="tel:+251911134195" className="btn-primary inline-flex items-center gap-2 hover:scale-105 transition-transform">
             <Phone size={16} /> Call +251 91 113 4195
           </a>
         </div>
