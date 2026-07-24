@@ -1,11 +1,8 @@
 ﻿import { Star, Quote } from 'lucide-react';
 const REVIEWS = [
   { name: 'Dawit Tesfaye', role: 'Toyota Corolla owner', text: 'Bought a 60Ah Bosch here 2 years ago. Still going strong. The team tested my old one, gave me a fair trade-in price, and installed the new one in 15 minutes. No hassle.', rating: 5 },
-  { name: 'Hanna Bekele', role: 'Hyundai i20 owner', text: 'My battery died at 7am before work. They opened early for me and had me back on the road in under an hour. Honest pricing, no surprises. Lifelong customer.', rating: 5 },
-  { name: 'Yonas Gebre', role: 'Taxi driver', text: 'I run a fleet and Habtamu is the only shop I trust. Their acid refill service brought 3 of my old batteries back to life - saved me thousands. Genuine experts.', rating: 5 },
   { name: 'Selamawit Alemu', role: 'Suzuki Swift owner', text: 'They explained the difference between the batteries clearly, no pushy sales. I picked the one in my budget and it has been perfect. Will recommend to friends.', rating: 5 },
   { name: 'Mulugeta Worku', role: 'Land Cruiser owner', text: 'Heavy-duty battery for my LC, sourced within a day. Warranty paperwork was already done when I arrived. Professional operation.', rating: 5 },
-  { name: 'Bethlehem Tadesse', role: 'Honda Fit owner', text: 'Came in for a terminal cleaning, they noticed my battery was on its way out and replaced it on the spot. Honest advice you can trust.', rating: 5 },
 ];
 export default function Testimonials() {
   return (

@@ -2,12 +2,12 @@
 import { Camera } from 'lucide-react';
 
 const PHOTOS = [
-  { src: 'https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?auto=format&fit=crop&w=800&q=80', alt: 'Battery display in shop',     tall: true  },
-  { src: 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=800&q=80', alt: 'Premium car battery',          tall: false },
-  { src: 'https://images.unsplash.com/photo-1599256871679-b6f17c2c4597?auto=format&fit=crop&w=800&q=80', alt: 'Battery terminals inspection', tall: false },
-  { src: 'https://images.unsplash.com/photo-1620891549027-942faecbd1b?auto=format&fit=crop&w=800&q=80', alt: 'New battery ready to install', tall: true  },
-  { src: 'https://images.unsplash.com/photo-1606755456206-b25206cde27e?auto=format&fit=crop&w=800&q=80', alt: 'Battery acid refill service',  tall: false },
-  { src: 'https://images.unsplash.com/photo-1632823471565-1ecdf5c6da77?auto=format&fit=crop&w=800&q=80',  alt: 'Expert installation service',  tall: false },
+  { src: 'https://th.bing.com/th/id/R.5a39880faad139f50ca127b1bb447204?rik=N%2fJE%2bfcrgTJmug&riu=http%3a%2f%2fwww.exebatteries.com%2fimg%2fbattery_stock_1.jpg&ehk=vnyUcBOmoSiui35jSHqWWj7EQcFbRFFZiU6UXeBYIjM%3d&risl=&pid=ImgRaw&r=0', alt: 'Battery display in shop',     tall: true  },
+  { src: 'https://images.unsplash.com/photo-1661997608910-da43d46039a8?auto=format&fit=crop&w=800&q=80', alt: 'Premium car battery',          tall: false },
+  { src: 'https://images.unsplash.com/photo-1625055930842-b9ad84b7facd?auto=format&fit=crop&w=800&q=80', alt: 'Battery terminals inspection', tall: false },
+  { src: 'https://plus.unsplash.com/premium_photo-1661770030805-0abb8fd880f1?auto=format&fit=crop&w=800&q=80', alt: 'New battery ready to install', tall: true  },
+  { src: 'https://plus.unsplash.com/premium_photo-1661434779070-cf8fc0e253ab?auto=format&fit=crop&w=800&q=80', alt: 'Battery acid refill service',  tall: false },
+  { src: 'https://plus.unsplash.com/premium_photo-1661717357358-67ae75ca57cd?auto=format&fit=crop&w=800&q=80',  alt: 'Expert installation service',  tall: false },
 ];
 
 export default function Gallery() {

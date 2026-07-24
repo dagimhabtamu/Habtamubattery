@@ -4,7 +4,7 @@ import { formatCurrency } from '../utils/format.js';
 import { ArrowRight, Star, ShieldCheck } from 'lucide-react';
 import Reveal from './Reveal.jsx';
 
-const PLACEHOLDER = 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=800&q=80';
+const PLACEHOLDER = 'https://th.bing.com/th/id/OIP.sztS7CqBqcIqIFUGTBgxhgHaE8?w=258&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3'; // Placeholder image for batteries without an image
 
 export default function TopBatteries() {
   const { data, loading } = useApi('/new-batteries?limit=4');

@@ -14,14 +14,14 @@ export const localBusinessJsonLd = {
   image: '/og-image.svg',
   description:
     'Car battery shop selling new batteries (35Ah-200Ah), trade-ins, accessories, acid, maintenance services.',
-  telephone: '+251-911-000000',
+  telephone: '+251-911-134195',
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Bole Road',
+    streetAddress: 'Germen Squre',
     addressLocality: 'Addis Ababa',
     addressCountry: 'ET',
   },
   url: typeof window !== 'undefined' ? window.location.origin : '',
   priceRange: '$$',
-  openingHours: 'Mo-Sa 08:00-19:00',
+  openingHours: 'Mo-Sa 07:00-19:00',
 };

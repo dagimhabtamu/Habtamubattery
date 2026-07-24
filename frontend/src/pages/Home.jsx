@@ -45,7 +45,7 @@ export default function Home() {
             <Reveal delay={0}><Tile icon={<Battery size={28}/>} title="New Batteries" text="35Ah-200Ah shop originals from top brands." to="/batteries" /></Reveal>
             <Reveal delay={100}><Tile icon={<Plug size={28}/>} title="Accessories" text="Connectors, terminals, wires and more." to="/accessories" /></Reveal>
             <Reveal delay={200}><Tile icon={<Wrench size={28}/>} title="Services" text="Acid change, terminal fix, repairs." to="/services" /></Reveal>
-            <Reveal delay={300}><Tile icon={<Beaker size={28}/>} title="Acid by the Liter" text="Top-ups and refills, stock always fresh." to="/services" /></Reveal>
+            <Reveal delay={300}><Tile icon={<Beaker size={28}/>} title="Acid by the Liter" text="Top-ups  stock always fresh." to="/services" /></Reveal>
           </div>
         </div>
       </section>

@@ -4,9 +4,9 @@ import Reveal from './Reveal.jsx';
 import useScrollY from '../hooks/useScrollY.js';
 
 const HERO_IMG   = 'https://images.unsplash.com/photo-1676337167752-2062c6ca7366?auto=format&fit=crop&w=1920&q=80';
-const IMG_TRADE  = 'https://images.unsplash.com/photo-1611159491892-c9d4d4b8b8e8?auto=format&fit=crop&w=800&q=80';
-const IMG_REPAIR = 'https://images.unsplash.com/photo-1581094488379-6c9d2eb6b0ee?auto=format&fit=crop&w=800&q=80';
-const IMG_SHOP   = 'https://images.unsplash.com/photo-1620714223084-8fcacc6dfd8d?auto=format&fit=crop&w=800&q=80';
+const IMG_TRADE  = 'https://plus.unsplash.com/premium_photo-1661425505025-238c888750f7?auto=format&fit=crop&w=800&q=80';
+const IMG_REPAIR = 'https://images.unsplash.com/photo-1625047509248-ec889cbff17f?auto=format&fit=crop&w=800&q=80';
+const IMG_SHOP   = 'https://plus.unsplash.com/premium_photo-1661549683908-b11e9855c469?auto=format&fit=crop&w=800&q=80';
 
 export default function Hero() {
   const scrollY = useScrollY();
@@ -83,7 +83,7 @@ export default function Hero() {
             <FeatureCard
               icon={<Wrench className='text-brand-600' />}
               title='Maintenance & Repairs'
-              text='Acid change, terminal cleaning, oxygen refill and more.'
+              text='Acid change, terminal cleaning and more.'
               img={IMG_REPAIR}
             />
           </Reveal>
