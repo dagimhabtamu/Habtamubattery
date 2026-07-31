@@ -1,0 +1,60 @@
+﻿{
+  "nav": {
+    "home": "መነሻ",
+    "batteries": "ባትሪዎች",
+    "accessories": "መለዋወጫዎች",
+    "services": "አገልግሎቶች",
+    "about": "ስለ እኛ",
+    "contact": "አግኙን",
+    "dashboard": "ዳሽቦርድ",
+    "logout": "ውጣ",
+    "login": "ግባ",
+    "menu": "ምናሌ"
+  },
+  "common": {
+    "search": "ፈልግ",
+    "searchPlaceholder": "ባትሪዎችን ፈልግ...",
+    "filters": "ማጣሪያዎች",
+    "order": "አዝዝ",
+    "buy": "ግዛ",
+    "call": "ደውል",
+    "viewAll": "ሁሉንም ይመልከቱ",
+    "details": "ዝርዝር",
+    "close": "ዝጋ",
+    "send": "ላክ",
+    "sending": "በመላክ ላይ...",
+    "sendMessage": "መልዕክት ላክ",
+    "loading": "በመጫን ላይ...",
+    "noResults": "ውጤት የለም",
+    "clearFilters": "ማጣሪያዎችን አጽዳ",
+    "showFilters": "ማጣሪያዎችን አሳይ",
+    "hideFilters": "ማጣሪያዎችን ደብቅ"
+  },
+  "batteries": {
+    "title": "አዲስ ባትሪዎች",
+    "subtitle": "ለመኪናዎ ትክክለኛውን አምፕ እና ምርት ይምረጡ።",
+    "outOfStock": "አልቋል",
+    "unavailable": "አይገኝም",
+    "orderTitle": "ትዕዛዝዎን ያጠናቅቁ",
+    "orderDesc": "በመስመር ላይ አንሸራትም። ትዕዛዝዎን ለማጠናቀቀ ይደውሉልን ወይም መደብራችን ይጎብኙ።"
+  },
+  "home": {
+    "heroEyebrow": "ከመጀመሪያው ጀምበር የታመነ",
+    "heroTitle": "መንዳትዎን ኃይል ይሙሉ።",
+    "heroHighlight": "ሁልጊዜ።",
+    "heroSubtitle": "ከ35Ah እስከ 200Ah ያሉ ከፍተኛ ጥራት ያላቸው የመኪና ባትሪዎች፣ ባለሙያ ሱቅ፣ መለዋወጫዎች፣ ጥገናዎች።",
+    "shopNow": "ባትሪዎች ይመልከቱ"
+  },
+  "admin": {
+    "dashboard": "ዳሽቦርድ",
+    "messages": "መልዕክቶች",
+    "newBatteries": "አዲስ ባትሪዎች",
+    "oldBatteries": "ያረሩ ባትሪዎች",
+    "accessories": "መለዋወጫዎች",
+    "acidStock": "አሲድ ክምችት",
+    "services": "አገልግሎቶች",
+    "sales": "ሽያጭ",
+    "expenses": "ወጪዎች",
+    "reports": "ሪፖርቶች"
+  }
+}

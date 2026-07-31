@@ -1,0 +1,60 @@
+﻿{
+  "nav": {
+    "home": "Home",
+    "batteries": "Batteries",
+    "accessories": "Accessories",
+    "services": "Services",
+    "about": "About",
+    "contact": "Contact",
+    "dashboard": "Dashboard",
+    "logout": "Logout",
+    "login": "Login",
+    "menu": "Menu"
+  },
+  "common": {
+    "search": "Search",
+    "searchPlaceholder": "Search batteries...",
+    "filters": "Filters",
+    "order": "Order",
+    "buy": "Buy",
+    "call": "Call",
+    "viewAll": "View all",
+    "details": "Details",
+    "close": "Close",
+    "send": "Send",
+    "sending": "Sending...",
+    "sendMessage": "Send message",
+    "loading": "Loading...",
+    "noResults": "No results",
+    "clearFilters": "Clear filters",
+    "showFilters": "Show filters",
+    "hideFilters": "Hide filters"
+  },
+  "batteries": {
+    "title": "New Batteries",
+    "subtitle": "Choose the right amp rating and brand for your vehicle.",
+    "outOfStock": "Out of stock",
+    "unavailable": "Unavailable",
+    "orderTitle": "Complete Your Order",
+    "orderDesc": "We don't sell online yet. To complete your order, give us a call or visit our shop directly."
+  },
+  "home": {
+    "heroEyebrow": "Trusted Since Day One",
+    "heroTitle": "Power Your Drive.",
+    "heroHighlight": "Every Time.",
+    "heroSubtitle": "Premium new car batteries from 35Ah to 200Ah, expert trade-ins, accessories, repairs, and battery acid by the liter.",
+    "shopNow": "Shop Batteries"
+  },
+  "admin": {
+    "dashboard": "Dashboard",
+    "messages": "Messages",
+    "newBatteries": "New Batteries",
+    "oldBatteries": "Old Batteries",
+    "accessories": "Accessories",
+    "acidStock": "Acid Stock",
+    "services": "Services",
+    "sales": "Sales & Trade-In",
+    "expenses": "Expenses",
+    "reports": "Reports"
+  }
+}
