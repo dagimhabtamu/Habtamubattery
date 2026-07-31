@@ -42,13 +42,13 @@ export default function TopBatteries() {
                 </div>
                 <div className='p-4'>
                   <p className='text-xs text-stone-500 uppercase tracking-wide'>{b.brand}</p>
-                  <h3 className='font-bold text-stone-900 mt-0.5'>{b.amperage}Ah {b.model && ('· ' + b.model)}</h3>
+                  <h3 className='font-bold text-stone-900 mt-0.5'>{b.amperage}Ah {b.model && ('Â· ' + b.model)}</h3>
                   <div className='flex items-center gap-1 mt-1 text-amber-500'>
                     <Star size={12} fill='currentColor' /><Star size={12} fill='currentColor' /><Star size={12} fill='currentColor' /><Star size={12} fill='currentColor' /><Star size={12} fill='currentColor' />
                   </div>
                   <div className='flex items-center justify-between mt-3'>
                     <span className='text-xl font-extrabold text-stone-900'>{formatCurrency(b.price)}</span>
-                    <Link to='/batteries' className='text-sm font-semibold text-brand-700 hover:text-brand-800'>Details →</Link>
+                    <Link to='/batteries' className='text-sm font-semibold text-brand-700 hover:text-brand-800'>Details â†’</Link>
                   </div>
                 </div>
               </article>

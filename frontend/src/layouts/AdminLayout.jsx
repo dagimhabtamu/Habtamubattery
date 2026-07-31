@@ -43,20 +43,20 @@ function SidebarContent({ onNavigate }) {
 
   return (
     <>
-      <div className="p-4 border-b border-stone-200 dark:border-stone-800">
+      <div className="p-4 border-b border-stone-200">
         <div className="flex items-center justify-between gap-2 mb-3">
           <div className="flex items-center gap-2">
             <div className="bg-brand-600 p-1.5 rounded-lg">
               <ShieldCheck className="text-white" size={18} />
             </div>
-            <span className="font-extrabold text-stone-900 dark:text-white">Admin Panel</span>
+            <span className="font-extrabold text-stone-900">Admin Panel</span>
           </div>
           <div className="flex items-center gap-0.5">
             <LanguageSwitcher />
             <ThemeToggle />
           </div>
         </div>
-        <p className="text-xs uppercase text-stone-500 dark:text-stone-400">Signed in as</p>
+        <p className="text-xs uppercase text-stone-500">Signed in as</p>
         <p className="font-semibold text-stone-900 dark:text-white truncate">{user?.name}</p>
         <p className="text-xs text-stone-500 dark:text-stone-400 capitalize">{user?.role}</p>
       </div>
@@ -71,7 +71,7 @@ function SidebarContent({ onNavigate }) {
         </div>
       </nav>
 
-      <div className="p-3 border-t border-stone-200 dark:border-stone-800">
+      <div className="p-3 border-t border-stone-200">
         <button
           onClick={handleLogout}
           className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-red-700 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors"
@@ -97,7 +97,7 @@ export default function AdminLayout() {
         <div className="flex items-center gap-2 min-w-0">
           <button
             onClick={() => setOpen(true)}
-            className="p-2 -ml-2 rounded hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700 dark:text-stone-300"
+            className="p-2 -ml-2 rounded hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700"
             aria-label="Open menu"
           >
             <Menu size={22} />
@@ -122,7 +122,7 @@ export default function AdminLayout() {
           <aside className="absolute left-0 top-0 bottom-0 w-72 max-w-[85vw] bg-white dark:bg-stone-900 shadow-xl flex flex-col">
             <button
               onClick={() => setOpen(false)}
-              className="absolute right-2 top-2 p-2 rounded hover:bg-stone-100 dark:hover:bg-stone-800 z-10 text-stone-700 dark:text-stone-300"
+              className="absolute right-2 top-2 p-2 rounded hover:bg-stone-100 dark:hover:bg-stone-800 z-10 text-stone-700"
               aria-label="Close menu"
             >
               <X size={20} />

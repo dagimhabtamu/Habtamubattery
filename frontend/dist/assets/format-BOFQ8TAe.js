@@ -1,0 +1,1 @@
+const e=r=>new Intl.NumberFormat("en-ET",{style:"currency",currency:"ETB",maximumFractionDigits:2}).format(Number(r||0)),t=r=>new Date(r).toLocaleDateString("en-ET",{year:"numeric",month:"short",day:"numeric"}),a=r=>new Intl.NumberFormat("en-ET").format(Number(r||0));export{a,t as b,e as f};

@@ -1,4 +1,4 @@
-import express from 'express';
+﻿import express from 'express';
 import cors from 'cors';
 import helmet from 'helmet';
 import morgan from 'morgan';
@@ -15,6 +15,7 @@ import acidRoutes from './routes/acidRoutes.js';
 import serviceRoutes from './routes/serviceRoutes.js';
 import saleRoutes from './routes/saleRoutes.js';
 import costRoutes from './routes/costRoutes.js';
+import contactMessageRoutes from './routes/contactMessageRoutes.js';
 import reportRoutes from './routes/reportRoutes.js';
 
 dotenv.config();
@@ -35,6 +36,7 @@ app.use('/api/acid', acidRoutes);
 app.use('/api/services', serviceRoutes);
 app.use('/api/sales', saleRoutes);
 app.use('/api/costs', costRoutes);
+app.use('/api/contact-messages', contactMessageRoutes);
 app.use('/api/reports', reportRoutes);
 
 app.use(notFound);

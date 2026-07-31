@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useNavigate, Link } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext.jsx';
@@ -34,7 +34,7 @@ export default function AdminLogin() {
       </Helmet>
 
       <div className="min-h-screen bg-stone-900 flex flex-col">
-        {/* Slim top bar — admin only, NO public navbar */}
+        {/* Slim top bar â€” admin only, NO public navbar */}
         <header className="bg-stone-800 border-b border-stone-700">
           <div className="max-w-7xl mx-auto px-4 h-14 flex items-center justify-between">
             <div className="flex items-center gap-2 text-white">
@@ -86,7 +86,7 @@ export default function AdminLogin() {
                 value={password}
                 onChange={(e) => setPassword(e.target.value)}
                 className="input mt-1 bg-stone-900 border-stone-700 text-white placeholder-stone-500"
-                placeholder="••••••••"
+                placeholder="â€¢â€¢â€¢â€¢â€¢â€¢â€¢â€¢"
                 autoComplete="current-password"
               />
             </label>

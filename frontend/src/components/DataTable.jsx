@@ -1,4 +1,4 @@
-import { useState } from 'react';
+﻿import { useState } from 'react';
 import { Search, ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default function DataTable({ columns, rows, pageSize = 10, searchable = true }) {

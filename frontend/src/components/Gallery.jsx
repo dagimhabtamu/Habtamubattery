@@ -1,4 +1,4 @@
-﻿import Reveal from './Reveal.jsx';
+import Reveal from './Reveal.jsx';
 import { Camera } from 'lucide-react';
 
 const PHOTOS = [

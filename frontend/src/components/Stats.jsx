@@ -76,11 +76,11 @@ export default function Stats() {
         {/* Compact trust badges inline */}
         <div className="mt-4 flex flex-wrap items-center justify-center gap-x-4 gap-y-1.5 text-white/85 text-xs">
           <span className="inline-flex items-center gap-1"><CheckCircle2 size={12} className="text-green-300" /> Authorized dealer</span>
-          <span className="text-white/30">·</span>
+          <span className="text-white/30">Â·</span>
           <span className="inline-flex items-center gap-1"><CheckCircle2 size={12} className="text-green-300" /> Free installation</span>
-          <span className="text-white/30">·</span>
+          <span className="text-white/30">Â·</span>
           <span className="inline-flex items-center gap-1"><CheckCircle2 size={12} className="text-green-300" /> Up to 24-month warranty</span>
-          <span className="text-white/30">·</span>
+          <span className="text-white/30">Â·</span>
           <span className="inline-flex items-center gap-1"><CheckCircle2 size={12} className="text-green-300" /> Trade-in welcome</span>
         </div>
       </div>

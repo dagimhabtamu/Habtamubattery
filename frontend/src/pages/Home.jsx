@@ -62,9 +62,9 @@ export default function Home() {
 
 function Tile({ icon, title, text, to }) {
   return (
-    <Link to={to} className="block bg-white border border-stone-200 rounded-xl p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group">
+    <Link to={to} className="block bg-white dark:bg-stone-900 border border-stone-200 dark:border-stone-800 rounded-xl p-5 sm:p-6 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 group min-w-0">
       <div className="text-brand-600 mb-3 group-hover:scale-110 transition-transform duration-300">{icon}</div>
-      <h3 className="font-bold text-lg text-stone-900 group-hover:text-brand-700 transition-colors">{title}</h3>
+      <h3 className="font-bold text-base sm:text-lg text-stone-900 dark:text-white group-hover:text-brand-700 transition-colors">{title}</h3>
       <p className="text-sm text-stone-600 mt-1">{text}</p>
     </Link>
   );

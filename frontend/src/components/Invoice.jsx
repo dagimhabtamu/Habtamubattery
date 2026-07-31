@@ -1,4 +1,4 @@
-import { formatCurrency, formatDate } from '../utils/format.js';
+﻿import { formatCurrency, formatDate } from '../utils/format.js';
 import { Printer } from 'lucide-react';
 
 export default function Invoice({ sale, business = 'Habtamu Batteries' }) {

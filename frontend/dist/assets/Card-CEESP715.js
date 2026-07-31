@@ -1,0 +1,1 @@
+import{j as s}from"./index-bMoxcwKg.js";function t({children:r,className:o=""}){return s.jsx("div",{className:`bg-white rounded-xl shadow-sm border border-stone-200 p-6 ${o}`,children:r})}export{t as C};
