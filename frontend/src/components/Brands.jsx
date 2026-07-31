@@ -1,4 +1,4 @@
-﻿import { Award, Battery, ShieldCheck } from 'lucide-react';
+import { Award, Battery, ShieldCheck } from 'lucide-react';
 
 const BRANDS = [
   { name: 'Bosch',    tagline: 'Premium German engineering' },
@@ -34,7 +34,7 @@ export default function Brands() {
 
   return (
     <section
-      className="bg-stone-50 border-y border-stone-200 py-10 overflow-hidden"
+      className="bg-stone-50 dark:bg-[#1a2332] border-y border-stone-200 dark:border-stone-700 py-10 overflow-hidden"
       aria-labelledby="brands-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mb-6">
@@ -63,8 +63,8 @@ export default function Brands() {
           </div>
         </div>
 
-        <div className="absolute inset-y-0 left-0 w-20 sm:w-32 bg-gradient-to-r from-stone-50 to-transparent pointer-events-none z-10" />
-        <div className="absolute inset-y-0 right-0 w-20 sm:w-32 bg-gradient-to-l from-stone-50 to-transparent pointer-events-none z-10" />
+        <div className="absolute inset-y-0 left-0 w-20 sm:w-32 bg-gradient-to-r from-stone-50 dark:from-[#1a2332] to-transparent pointer-events-none z-10" />
+        <div className="absolute inset-y-0 right-0 w-20 sm:w-32 bg-gradient-to-l from-stone-50 dark:from-[#1a2332] to-transparent pointer-events-none z-10" />
       </div>
 
       <style>{`
