@@ -33,7 +33,7 @@ export default function Navbar() {
             <span className="text-base sm:text-lg">Habtamu Batteries</span>
           </Link>
 
-          <div className="hidden md:flex items-center gap-1">
+          <div className="hidden lg:flex items-center gap-1">
             <NavLink to="/"          className={linkClass} end>{t('nav.home')}</NavLink>
             <NavLink to="/batteries" className={linkClass}>{t('nav.batteries')}</NavLink>
             <NavLink to="/accessories" className={linkClass}>{t('nav.accessories')}</NavLink>
@@ -42,7 +42,7 @@ export default function Navbar() {
             <NavLink to="/contact"   className={linkClass}>{t('nav.contact')}</NavLink>
           </div>
 
-          <div className="hidden md:flex items-center gap-2">
+          <div className="hidden lg:flex items-center gap-2">
             <LanguageSwitcher />
             <ThemeToggle />
             {user ? (
@@ -66,7 +66,7 @@ export default function Navbar() {
 
           <button
             onClick={() => setMenuOpen((v) => !v)}
-            className="md:hidden p-2 rounded-lg text-stone-700 hover:bg-stone-100"
+            className="lg:hidden p-2 rounded-lg text-stone-700 hover:bg-stone-100"
             aria-label="Toggle menu"
           >
             {menuOpen ? <X size={22} /> : <Menu size={22} />}
@@ -74,7 +74,7 @@ export default function Navbar() {
         </div>
 
         {menuOpen && (
-          <div className="md:hidden border-t border-stone-200 py-3 space-y-1">
+          <div className="lg:hidden border-t border-stone-200 py-3 space-y-1">
             <NavLink to="/"          className={linkClass} end onClick={() => setMenuOpen(false)}>{t('nav.home')}</NavLink>
             <NavLink to="/batteries" className={linkClass} onClick={() => setMenuOpen(false)}>{t('nav.batteries')}</NavLink>
             <NavLink to="/accessories" className={linkClass} onClick={() => setMenuOpen(false)}>{t('nav.accessories')}</NavLink>

@@ -29,8 +29,8 @@ const NAV = [
   { to: '/admin/messages',             key: 'messages',     Icon: MessageSquare },
 ];
 
-const SIDEBAR_BG = { backgroundColor: '#ffffff' };
-const MAIN_BG    = { backgroundColor: '#fafaf9' };
+const SIDEBAR_BG = { backgroundColor: 'var(--admin-sidebar-bg, #ffffff)' };
+const MAIN_BG    = { backgroundColor: 'var(--admin-main-bg, #fafaf9)' };
 
 function SidebarContent({ onNavigate }) {
   const { user, logout } = useAuth();

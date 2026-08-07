@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { Plus, Minus } from 'lucide-react';
 const FAQS = [
   { q: 'How long does a car battery typically last?', a: 'Most car batteries last 3-5 years in normal conditions. Hot climates, frequent short trips, and leaving electronics on can shorten lifespan. We recommend a free health check every 12 months.' },
@@ -12,7 +12,7 @@ const FAQS = [
 export default function Faq() {
   const [open, setOpen] = useState(0);
   return (
-    <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16" aria-labelledby="faq-heading">
+    <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-16" aria-labelledby="faq-heading" style={{ backgroundColor: "var(--faq-bg, #ffffff)" }}>
       <div className="text-center mb-10">
         <p className="text-brand-700 font-semibold uppercase tracking-wider text-xs mb-2">Got Questions?</p>
         <h2 id="faq-heading" className="text-3xl font-extrabold text-stone-900">Frequently Asked Questions</h2>

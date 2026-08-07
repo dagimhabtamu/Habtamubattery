@@ -9,7 +9,7 @@ const SHOP_ADDRESS    = 'XP8P+C56, Addis Ababa, Ethiopia';
 const SHOP_PHONE_DISP = '+251 91 113 4195';
 const SHOP_PHONE_RAW  = '+251911134195';
 const GMAP_DIR        = 'https://www.google.com/maps/dir/?api=1&destination=Habtamu+Battery+XP8P+C56+Addis+Ababa';
-const PLACEHOLDER_IMG = 'https://images.unsplash.com/photo-1605559424843-9e4c228bf1c2?auto=format&fit=crop&w=400&q=80';
+const PLACEHOLDER_IMG = 'https://th.bing.com/th/id/OIP.sztS7CqBqcIqIFUGTBgxhgHaE8?w=258&h=180&c=7&r=0&o=7&dpr=1.5&pid=1.7&rm=3';
 
 export default function NewBatteries() {
   const { data, loading } = useApi('/new-batteries?limit=200');
