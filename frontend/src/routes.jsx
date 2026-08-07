@@ -1,4 +1,4 @@
-﻿import { lazy } from 'react';
+import { lazy } from 'react';
 import { Routes, Route, Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar.jsx';
 import Footer from './components/Footer.jsx';

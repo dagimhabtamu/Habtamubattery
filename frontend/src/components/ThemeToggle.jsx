@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react';
 import { Sun, Moon } from 'lucide-react';
 
+function readSaved() {
+  try { return localStorage.getItem('hb_theme') === 'dark'; } catch (e) { return false; }
+}
+
 export default function ThemeToggle() {
-  const [dark, setDark] = useState(false);
+  const [dark, setDark] = useState(readSaved);
 
   useEffect(() => {
-    try {
-      const saved = localStorage.getItem('hb_theme');
-      if (saved === 'dark') {
-        document.documentElement.classList.add('dark');
-        setDark(true);
-      }
-    } catch (e) { /* ignore */ }
+    const isDark = readSaved();
+    document.documentElement.classList.toggle('dark', isDark);
+    setDark(isDark);
   }, []);
 
   const toggle = () => {

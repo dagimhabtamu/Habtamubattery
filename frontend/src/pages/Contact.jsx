@@ -1,4 +1,4 @@
-﻿import { Helmet } from 'react-helmet-async';
+import { Helmet } from 'react-helmet-async';
 import { useState } from 'react';
 import { MapPin, Phone, Mail, Clock, Send, MessageSquare, Navigation } from 'lucide-react';
 import Reveal from '../components/Reveal.jsx';
@@ -36,6 +36,7 @@ export default function Contact() {
   };
 
   return (
+    <div>
     <>
       <Helmet>
         <title>Contact Us - Habtamu Batteries</title>
@@ -47,7 +48,7 @@ export default function Contact() {
           <Reveal>
             <p className="inline-block bg-brand-600/90 px-3 py-1 rounded-full text-xs font-semibold tracking-wider uppercase mb-4">Get in touch</p>
             <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight mb-2">We are here to help</h1>
-            <p className="text-stone-300 max-w-2xl mx-auto">Call, message, or visit us — whichever is easier for you.</p>
+            <p className="text-stone-300 max-w-2xl mx-auto">Call, message, or visit us Ã¢â‚¬â€ whichever is easier for you.</p>
           </Reveal>
         </div>
       </section>
@@ -127,5 +128,6 @@ export default function Contact() {
         </div>
       </section>
     </>
+    </div>
   );
 }

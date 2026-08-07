@@ -1,4 +1,4 @@
-﻿import { useMemo, useState } from 'react';
+import { useMemo, useState } from 'react';
 import { Helmet } from 'react-helmet-async';
 import { useApi } from '../hooks/useApi.js';
 import { Search, Phone, MapPin, Clock, ShoppingBag, ShieldCheck, Star, SlidersHorizontal, X } from 'lucide-react';

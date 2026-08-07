@@ -1,4 +1,4 @@
-﻿import { useState } from 'react';
+import { useState } from 'react';
 import { NavLink, Outlet, useNavigate } from 'react-router-dom';
 import {
   LayoutDashboard, Boxes, Package, Plug, Beaker, Wrench,
@@ -12,8 +12,8 @@ import { useTranslation } from 'react-i18next';
 const linkClass = ({ isActive }) =>
   `flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium transition-colors ${
     isActive
-      ? 'bg-brand-50 text-brand-700 dark:bg-brand-900/30 dark:text-brand-300'
-      : 'text-stone-700 dark:text-stone-300 hover:bg-stone-100 dark:hover:bg-stone-800'
+      ? 'bg-orange-50 text-orange-700'
+      : 'text-stone-700 hover:bg-stone-100'
   }`;
 
 const NAV = [
@@ -28,6 +28,9 @@ const NAV = [
   { to: '/admin/reports',              key: 'reports',      Icon: BarChart3 },
   { to: '/admin/messages',             key: 'messages',     Icon: MessageSquare },
 ];
+
+const SIDEBAR_BG = { backgroundColor: '#ffffff' };
+const MAIN_BG    = { backgroundColor: '#fafaf9' };
 
 function SidebarContent({ onNavigate }) {
   const { user, logout } = useAuth();
@@ -46,7 +49,7 @@ function SidebarContent({ onNavigate }) {
       <div className="p-4 border-b border-stone-200">
         <div className="flex items-center justify-between gap-2 mb-3">
           <div className="flex items-center gap-2">
-            <div className="bg-brand-600 p-1.5 rounded-lg">
+            <div className="bg-orange-600 p-1.5 rounded-lg">
               <ShieldCheck className="text-white" size={18} />
             </div>
             <span className="font-extrabold text-stone-900">Admin Panel</span>
@@ -57,8 +60,8 @@ function SidebarContent({ onNavigate }) {
           </div>
         </div>
         <p className="text-xs uppercase text-stone-500">Signed in as</p>
-        <p className="font-semibold text-stone-900 dark:text-white truncate">{user?.name}</p>
-        <p className="text-xs text-stone-500 dark:text-stone-400 capitalize">{user?.role}</p>
+        <p className="font-semibold text-stone-900 truncate">{user?.name}</p>
+        <p className="text-xs text-stone-500 capitalize">{user?.role}</p>
       </div>
 
       <nav className="flex-1 p-3 overflow-y-auto">
@@ -74,7 +77,7 @@ function SidebarContent({ onNavigate }) {
       <div className="p-3 border-t border-stone-200">
         <button
           onClick={handleLogout}
-          className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-red-700 dark:text-red-400 hover:bg-red-50 dark:hover:bg-red-900/20 transition-colors"
+          className="w-full flex items-center gap-3 px-3 py-2 rounded-lg text-sm font-medium text-red-700 hover:bg-red-50 transition-colors"
         >
           <LogOut size={16} /> {t('nav.logout')}
         </button>
@@ -88,27 +91,33 @@ export default function AdminLayout() {
   const { user } = useAuth();
 
   return (
-    <div className="min-h-screen md:flex md:min-h-[calc(100vh-4rem)] bg-stone-50 dark:bg-stone-950">
-      <aside className="hidden md:flex md:flex-col w-64 bg-white dark:bg-stone-900 border-r border-stone-200 dark:border-stone-800 flex-shrink-0">
+    <div className="min-h-screen md:flex" style={MAIN_BG}>
+      <aside
+        className="hidden md:flex md:flex-col w-64 border-r border-stone-200 flex-shrink-0"
+        style={SIDEBAR_BG}
+      >
         <SidebarContent />
       </aside>
 
-      <div className="md:hidden sticky top-0 z-30 bg-white dark:bg-stone-900 border-b border-stone-200 dark:border-stone-800 flex items-center justify-between px-4 h-14">
+      <div
+        className="md:hidden sticky top-0 z-30 border-b border-stone-200 flex items-center justify-between px-4 h-14"
+        style={SIDEBAR_BG}
+      >
         <div className="flex items-center gap-2 min-w-0">
           <button
             onClick={() => setOpen(true)}
-            className="p-2 -ml-2 rounded hover:bg-stone-100 dark:hover:bg-stone-800 text-stone-700"
+            className="p-2 -ml-2 rounded hover:bg-stone-100 text-stone-700"
             aria-label="Open menu"
           >
             <Menu size={22} />
           </button>
           <div className="flex items-center gap-1.5">
-            <div className="bg-brand-600 p-1 rounded">
+            <div className="bg-orange-600 p-1 rounded">
               <ShieldCheck className="text-white" size={14} />
             </div>
-            <span className="font-bold text-stone-900 dark:text-white text-sm">Admin</span>
+            <span className="font-bold text-stone-900 text-sm">Admin</span>
           </div>
-          <span className="text-xs text-stone-500 dark:text-stone-400 truncate ml-1 max-w-[80px]">{user?.name}</span>
+          <span className="text-xs text-stone-500 truncate ml-1 max-w-[80px]">{user?.name}</span>
         </div>
         <div className="flex items-center gap-0.5 flex-shrink-0">
           <LanguageSwitcher />
@@ -119,10 +128,13 @@ export default function AdminLayout() {
       {open && (
         <div className="md:hidden fixed inset-0 z-40">
           <div className="absolute inset-0 bg-black/50" onClick={() => setOpen(false)} />
-          <aside className="absolute left-0 top-0 bottom-0 w-72 max-w-[85vw] bg-white dark:bg-stone-900 shadow-xl flex flex-col">
+          <aside
+            className="absolute left-0 top-0 bottom-0 w-72 max-w-[85vw] shadow-xl flex flex-col"
+            style={SIDEBAR_BG}
+          >
             <button
               onClick={() => setOpen(false)}
-              className="absolute right-2 top-2 p-2 rounded hover:bg-stone-100 dark:hover:bg-stone-800 z-10 text-stone-700"
+              className="absolute right-2 top-2 p-2 rounded hover:bg-stone-100 z-10 text-stone-700"
               aria-label="Close menu"
             >
               <X size={20} />
